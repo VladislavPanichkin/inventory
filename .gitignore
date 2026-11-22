@@ -1,0 +1,21 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+
+# Environment files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Generated Prisma client
+backend/src/generated/
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Local development photo storage
+backend/.data/

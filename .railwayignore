@@ -1,0 +1,5 @@
+# Extra exclusions for `railway up` uploads (on top of .gitignore).
+# Secrets (.env) and build output are already excluded by .gitignore and .dockerignore.
+.claude
+**/coverage
+*.log

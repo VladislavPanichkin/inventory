@@ -1,0 +1,35 @@
+{
+  "name": "inventory-management",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Private inventory admin with eBay order synchronization",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "db:up": "docker compose up -d --wait postgres",
+    "db:down": "docker compose down",
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "typecheck": "npm run typecheck -w backend && npm run typecheck -w frontend",
+    "test": "npm run test -w backend && npm run test -w frontend",
+    "railway:plan": "railway config plan",
+    "railway:deploy": "railway up --service inventory-app --detach -y"
+  },
+  "devDependencies": {
+    "railway": "3.16.0"
+  },
+  "overrides": {
+    "vite": "7.3.7"
+  },
+  "allowScripts": {
+    "prisma@7.10.1": true,
+    "@prisma/engines@7.10.1": true,
+    "esbuild@0.28.2": true
+  }
+}

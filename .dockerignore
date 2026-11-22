@@ -1,0 +1,13 @@
+# Never send secrets, local builds or dependencies into the image build.
+**/node_modules
+**/dist
+**/coverage
+backend/src/generated
+.env
+**/.env
+**/.env.*
+!**/.env.example
+.git
+.claude
+*.log
+.DS_Store
